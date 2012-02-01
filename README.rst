@@ -26,6 +26,7 @@ Nagios Plugins
 --------------
 
 You can read about Nagios plugin development here:
+
   http://nagiosplug.sourceforge.net/developer-guidelines.html
 
 In particular, you will likely be interested in learning about `plugin output <http://nagiosplug.sourceforge.net/developer-guidelines.html#PLUGOUTPUT>`_.
