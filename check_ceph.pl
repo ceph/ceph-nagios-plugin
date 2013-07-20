@@ -62,8 +62,7 @@ while (defined( my $line = <CEPHOUT> )) {
 	chomp $line;
 
 	my $health_status = '';
-	# matching on the expected second line of output with the arrow pointing to the right (->)
-	if (($health_status) = ($line =~ /.+\ ->\ \'(HEALTH_(OK|WARN|ERR).*)\'.*/)) {
+	if (($health_status) = ($line =~ m/(HEALTH_(OK|WARN|ERR))/ )) {
 		print "status: '$health_status'\n";
 		if ($health_status =~ /^HEALTH_OK/) {
 			exit ($STATUSCODE{'OK'});
